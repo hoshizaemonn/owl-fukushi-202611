@@ -133,6 +133,9 @@ th{font-size:12px;color:var(--sub);font-weight:700}
 .sr small{display:block;color:var(--sub);font-size:12.5px;line-height:1.6}
 .sr a{color:var(--blue);word-break:break-all;font-size:13px}
 .sr.old{border-style:dashed}
+
+.vt{display:inline-block;font-size:13px;font-weight:700;background:var(--orange);color:#fff;border-radius:99px;padding:1px 11px;margin-right:8px;vertical-align:2px}
+.ans{background:var(--green-bg);border-left:5px solid var(--green);border-radius:0 10px 10px 0;padding:10px 14px;margin:8px 0 4px;font-size:15px;line-height:1.7}
 </style>
 </head>
 <body>
@@ -146,10 +149,36 @@ th{font-size:12px;color:var(--sub);font-weight:700}
   <h2>先に（結論）</h2>
   <div class="grid2" style="margin-top:10px">
     <div class="concl good"><b><span class="no">1</span>件数は10月より減、質は上向き</b><small>問い合わせは8件で、質の高い◎が4件。◎の割合は26%→50%（件数が少ないので傾向まで）</small></div>
-    <div class="concl mid"><b><span class="no">2</span>広告で数えられた問い合わせは、<span style="white-space:nowrap">Yahooが3件・</span><span style="white-space:nowrap">Googleが1件</span></b><small>費用はGoogleが約32万円、Yahooが約14万円。Yahooのほうが、1件あたりが安い</small></div>
-    <div class="concl mid"><b><span class="no">3</span>Yahooの問い合わせは、すべて「経営」の語から</b><small>予算が余るのは検索の量が少ないため。入札や予算では増えない</small></div>
-    <div class="concl"><b><span class="no">4</span>次は、<span style="white-space:nowrap">Yahoo＝検索語に特化したLP</span>／<span style="white-space:nowrap">Google＝動画だけのLP</span></b><small>どちらもモック・参考例まで準備。流すかどうかの判断待ち</small></div>
-  </div>
+    <div class="concl mid"><b><span class="no">2</span>検証①：LPを短くしたら、序盤の離脱は減った傾向</b><small>25%まで届いた割合が48%→74%。フォーム付近までは11%→18%で、まだ偶然の範囲</small></div>
+    <div class="concl mid"><b><span class="no">3</span>検証②：キーワードを増やしても、クリック率は同じ</b><small>2語13.6%・7語12.9%。7語は量が約2.2倍、1クリックは約4割の費用。問い合わせの差は未確定</small></div>
+    <div class="concl"><b><span class="no">4</span>Yahooの問い合わせは、すべて「経営」の語から</b><small>次は、<span style="white-space:nowrap">Yahoo＝検索語に特化したLP</span>／<span style="white-space:nowrap">Google＝動画だけのLP</span></small></div>
+</div>
+
+<h2 style="margin:26px 0 8px">今回の検証の結果</h2>
+
+<div class="card">
+  <h2><span class="vt">検証①</span>LPを短くしたら、離脱はどうなったか</h2>
+  <div class="ans"><b>答え：序盤で離れる人は減った傾向。フォームまで届く人が増えたとは、まだ言えない。</b></div>
+  <p class="lead" style="margin-bottom:6px">Clarity・Google・スマホ。入れ替え版＝11/7〜11/12（PV27）／短縮版＝11/13〜11/17（-eと-fの合算・PV73）。ページのどこまで届いたか、の割合です。</p>
+  <div class="legend"><span><i style="background:var(--gray-bar)"></i>入れ替え版（-b）</span><span><i style="background:var(--blue)"></i>短縮版（-e・-f）</span></div>
+  <div class="bar-row"><div>25%まで届いた</div><div class="bars"><div class="b"><i class="old" style="width:48%"></i><div class="lab"><span>48%</span><em>13/27</em></div></div><div class="b"><i class="new" style="width:74%"></i><div class="lab"><span>74%</span><em>54/73</em><span class="verdict v-ok">差あり（p=0.018）</span></div></div></div></div>
+  <div class="bar-row"><div>50%まで</div><div class="bars"><div class="b"><i class="old" style="width:44%"></i><div class="lab"><span>44%</span><em>12/27</em></div></div><div class="b"><i class="new" style="width:67%"></i><div class="lab"><span>67%</span><em>49/73</em><span class="verdict v-no">境界（p=0.063）</span></div></div></div></div>
+  <div class="bar-row"><div>75%まで</div><div class="bars"><div class="b"><i class="old" style="width:33%"></i><div class="lab"><span>33%</span><em>9/27</em></div></div><div class="b"><i class="new" style="width:37%"></i><div class="lab"><span>37%</span><em>27/73</em><span class="verdict v-same">差なし（p=0.82）</span></div></div></div></div>
+  <div class="bar-row"><div>フォーム付近まで</div><div class="bars"><div class="b"><i class="old" style="width:11%"></i><div class="lab"><span>11%</span><em>3/27</em></div></div><div class="b"><i class="new" style="width:18%"></i><div class="lab"><span>18%</span><em>13/73</em><span class="verdict v-same">偶然の範囲（p=0.55）</span></div></div></div></div>
+  <div class="bar-row"><div>FAQ以外のタップ（1PVあたり）</div><div class="bars"><div class="b"><i class="old" style="width:9%"></i><div class="lab"><span>0.26</span></div></div><div class="b"><i class="new" style="width:24%"></i><div class="lab"><span>0.73</span><span class="verdict v-ok">約2.8倍</span></div></div></div></div>
+  <p class="note">短いページは、同じ％でも少ないスクロールで届くため、序盤の差には「短くなった分」が含まれます。フォーム付近の差を見分けるには、各400PVほど必要です。FAQのタップは、ほぼ同じでした（1PVあたり1.44→1.68）。</p>
+</div>
+
+<div class="card">
+  <h2><span class="vt">検証②</span>Googleのキーワードを、少なく（2語）と多く（7語）で比べたら</h2>
+  <div class="ans"><b>答え：押されやすさ（クリック率）は同じ。多いほうが、入ってくる量が約2.2倍で、1クリックは約4割の費用。問い合わせの差は、まだ言えない。</b></div>
+  <p class="lead" style="margin:8px 0 6px">11/13〜11/18の6日間。LP（短縮版）・広告文・予算（各7,050円/日）は同じ。変えたのは、語の数だけです。</p>
+  <div class="legend"><span><i style="background:var(--orange)"></i>A：少ない（2語）</span><span><i style="background:var(--blue)"></i>B：多い（7語）</span></div>
+  <div class="bar-row"><div>クリック率</div><div class="bars"><div class="b"><i class="a" style="width:41%"></i><div class="lab"><span>13.6%</span><em>41/301</em></div></div><div class="b"><i class="bb" style="width:39%"></i><div class="lab"><span>12.9%</span><em>90/698</em><span class="verdict v-same">差なし（p=0.76）</span></div></div></div></div>
+  <div class="bar-row"><div>クリック数</div><div class="bars"><div class="b"><i class="a" style="width:46%"></i><div class="lab"><span>41</span></div></div><div class="b"><i class="bb" style="width:100%"></i><div class="lab"><span>90</span><span class="verdict v-ok">約2.2倍</span></div></div></div></div>
+  <div class="bar-row"><div>1クリックの費用</div><div class="bars"><div class="b"><i class="a" style="width:100%"></i><div class="lab"><span>約1,030円</span><em>42,329円/41</em></div></div><div class="b"><i class="bb" style="width:39%"></i><div class="lab"><span>約400円</span><em>36,212円/90</em><span class="verdict v-ok">約4割</span></div></div></div></div>
+  <div class="bar-row"><div>問い合わせ</div><div class="bars"><div class="b"><div class="lab"><span>A：0件／41クリック</span></div></div><div class="b"><div class="lab"><span>B：1件／90クリック</span><span class="verdict v-same">まだ比べられない（p=1.00）</span></div></div></div></div>
+  <p class="note">語：A＝障害者グループホーム 経営／開業。B＝グループホーム 経営・開業・設立・開設 など7語（Aの語は除外して、かぶらせていません）。判定は12/11まで続けます。</p>
 </div>
 
 <div class="card">
@@ -181,18 +210,6 @@ th{font-size:12px;color:var(--sub);font-weight:700}
     <div class="sr old"><div><b>前のLP（Google）</b><small>11/7〜11/12</small></div><div>入れ替え版（Q&amp;Aを上に上げただけ）<br><a href="https://owl-fukushi.net/lp_zero_lite_20260918-b/" target="_blank" rel="noopener">owl-fukushi.net/lp_zero_lite_20260918-b/</a><small>11/13に、短縮版へ切り替え</small></div></div>
   </div>
   <p class="note">比較の期間は、11/13〜12/11の4週間です。途中で、予算・広告文・語は変えない前提です。</p>
-</div>
-
-<div class="card">
-  <h2>LPの離脱：入れ替え版 → 短縮版</h2>
-  <p class="lead" style="margin-bottom:6px">Clarity・Google・スマホ。入れ替え版＝11/7〜11/12（PV27）／短縮版＝11/13〜11/17（-eと-fの合算・PV73）。ページのどこまで届いたか、の割合です。</p>
-  <div class="legend"><span><i style="background:var(--gray-bar)"></i>入れ替え版（-b）</span><span><i style="background:var(--blue)"></i>短縮版（-e・-f）</span></div>
-  <div class="bar-row"><div>25%まで届いた</div><div class="bars"><div class="b"><i class="old" style="width:48%"></i><div class="lab"><span>48%</span><em>13/27</em></div></div><div class="b"><i class="new" style="width:74%"></i><div class="lab"><span>74%</span><em>54/73</em><span class="verdict v-ok">差あり（p=0.018）</span></div></div></div></div>
-  <div class="bar-row"><div>50%まで</div><div class="bars"><div class="b"><i class="old" style="width:44%"></i><div class="lab"><span>44%</span><em>12/27</em></div></div><div class="b"><i class="new" style="width:67%"></i><div class="lab"><span>67%</span><em>49/73</em><span class="verdict v-no">境界（p=0.063）</span></div></div></div></div>
-  <div class="bar-row"><div>75%まで</div><div class="bars"><div class="b"><i class="old" style="width:33%"></i><div class="lab"><span>33%</span><em>9/27</em></div></div><div class="b"><i class="new" style="width:37%"></i><div class="lab"><span>37%</span><em>27/73</em><span class="verdict v-same">差なし（p=0.82）</span></div></div></div></div>
-  <div class="bar-row"><div>フォーム付近まで</div><div class="bars"><div class="b"><i class="old" style="width:11%"></i><div class="lab"><span>11%</span><em>3/27</em></div></div><div class="b"><i class="new" style="width:18%"></i><div class="lab"><span>18%</span><em>13/73</em><span class="verdict v-same">偶然の範囲（p=0.55）</span></div></div></div></div>
-  <div class="bar-row"><div>FAQ以外のタップ（1PVあたり）</div><div class="bars"><div class="b"><i class="old" style="width:9%"></i><div class="lab"><span>0.26</span></div></div><div class="b"><i class="new" style="width:24%"></i><div class="lab"><span>0.73</span><span class="verdict v-ok">約2.8倍</span></div></div></div></div>
-  <p class="note"><b>まとめ：序盤で離れる人は減った傾向。フォームまで届く人が増えたとは、まだ言えない。</b>短いページは、同じ％でも少ないスクロールで届くため、序盤の差には「短くなった分」が含まれます。フォーム付近の差を見分けるには、各400PVほど必要です。FAQのタップは、ほぼ同じでした（1PVあたり1.44→1.68）。</p>
 </div>
 
 <div class="card">
