@@ -1694,6 +1694,7 @@ var KX_LOCAL_SRC = "";  /* モック専用：手元のmp4（外付けHDD）。�
 (function(){
   var box=document.getElementById('kx-screen'), st=document.getElementById('kx-state');
   var links=document.querySelectorAll('#kx-chapters a');
+  if(KX_VIDEO_ID){box.innerHTML='<iframe style="width:100%;height:100%;border:0;aspect-ratio:16/9" src="https://www.youtube.com/embed/'+KX_VIDEO_ID+'?rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy" title="愛知オーナーインタビュー"></iframe>';box.style.padding='0';}
   for(var i=0;i<links.length;i++){(function(a){
     a.addEventListener('click',function(e){
       e.preventDefault();
@@ -4426,5 +4427,5 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
 
 
-Served from: owl-fukushi.net @ 2026-11-23 16:56:48 by W3 Total Cache
+Served from: owl-fukushi.net @ 2026-11-23 17:02:39 by W3 Total Cache
 -->
