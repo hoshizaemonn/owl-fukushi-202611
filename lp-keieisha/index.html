@@ -100,12 +100,12 @@ h2,h3,.q5 b,.fv h1,.big-q,.steps b,.promise b,.card .k{text-wrap:balance;word-br
 .fv .dots img{width:100%;height:100%;object-fit:cover}
 .fv .visual{margin-bottom:56px!important}
 @media(min-width:700px){.fv .dots button{width:52px;height:52px}.fv .dots{bottom:-72px}.fv .visual{margin-bottom:80px!important}}
-.strip{position:relative;margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
-.strip div{padding:18px 6px 16px;text-align:center}
-.strip div+div{border-left:1px solid var(--line)}
-.strip b{display:block;white-space:nowrap;font-size:clamp(20px,5.6vw,32px);color:var(--ink);line-height:1.2}
-.strip b small{font-size:.5em;margin-left:2px}
-.strip span{display:block;font-size:12px;color:var(--sub);line-height:1.5;margin-top:6px}
+.strip{position:relative;margin-top:26px;background:#fff;border:2px solid var(--org);border-radius:16px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));box-shadow:0 10px 26px rgba(230,103,44,.14)}
+.strip div{padding:20px 6px 18px;text-align:center}
+.strip div+div{border-left:1px dashed #f3c4a6}
+.strip b{display:block;white-space:nowrap;font-size:clamp(26px,7.6vw,48px);color:var(--org);line-height:1.1;font-weight:700;letter-spacing:-.01em}
+.strip b small{font-size:.42em;margin-left:2px;color:var(--ink)}
+.strip span{display:block;font-size:12px;color:var(--ink);font-weight:700;line-height:1.5;margin-top:8px}
 .fvnote{margin:12px 0 0;font-size:12px;color:var(--sub);text-align:center}
 @media(min-width:700px){
   .fv{padding:48px 0 40px}
@@ -119,13 +119,13 @@ h2,h3,.q5 b,.fv h1,.big-q,.steps b,.promise b,.card .k{text-wrap:balance;word-br
   .strip span{font-size:13px}
 }
 /* ---------- FV v3（日本M&Aセンター型） ---------- */
-.fx{position:relative;padding:28px 0 30px;background:linear-gradient(115deg,#ffffff 0%,#f6faf8 45%,#e7f3f1 100%);overflow:hidden}
+.fx{position:relative;padding:28px 0 30px;background:linear-gradient(115deg,#ffffff 0%,#fffaf5 45%,#fdeee2 100%);overflow:hidden}
 .fx .wrap{display:grid;gap:16px;grid-template-areas:"l" "r" "c" "s"}
 .fx-l{display:contents}.fx-hd{grid-area:l}.fx-cta{grid-area:c}.fx-r{grid-area:r}.fx .strip{grid-area:s;margin-top:8px}
-.fx-tag{font-family:"Shippori Mincho",serif;font-weight:700;color:#1f4f4a;font-size:clamp(16px,4.2vw,26px);line-height:1.6;margin:0 0 10px;letter-spacing:.03em}
+.fx-tag{font-family:"Shippori Mincho",serif;font-weight:700;color:#3a2c22;font-size:clamp(16px,4.2vw,26px);line-height:1.6;margin:0 0 10px;letter-spacing:.03em}
 .fx-h{display:flex;align-items:center;gap:12px}
 .fx-owl{width:clamp(64px,17vw,118px);height:auto;flex:0 0 auto;filter:drop-shadow(0 4px 8px rgba(0,0,0,.12))}
-.fx h1{margin:0;font-family:"Shippori Mincho",serif;font-weight:700;line-height:1.22;letter-spacing:.02em;font-size:clamp(34px,9.6vw,76px);background:linear-gradient(100deg,#1d4f47 0%,#24766a 55%,#2f9a8f 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fx h1{margin:0;font-family:"Shippori Mincho",serif;font-weight:700;line-height:1.22;letter-spacing:.02em;font-size:clamp(34px,9.6vw,76px);background:linear-gradient(100deg,#f29a4c 0%,#e6672c 50%,#c9501f 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .fx h1 span{display:block;white-space:nowrap}
 .fx-note{font-family:"Shippori Mincho",serif;font-size:12px;color:#5b5650;margin:12px 0 0;line-height:1.8}
 .fx-cta{display:grid;gap:12px;margin-top:2px}
@@ -137,15 +137,15 @@ h2,h3,.q5 b,.fv h1,.big-q,.steps b,.promise b,.card .k{text-wrap:balance;word-br
 .fx-c b{display:block;font-size:clamp(20px,5.4vw,26px);letter-spacing:.12em;line-height:1.3}
 .fx-c small{display:block;font-size:13px;font-weight:700;letter-spacing:.06em;opacity:.95;line-height:1.5}
 .fx-c i{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-style:normal;font-size:26px;line-height:1}
-.fx-v{position:relative;border-radius:6px;overflow:hidden;background:#182b2a;aspect-ratio:16/9;box-shadow:0 14px 32px rgba(20,60,55,.18)}
+.fx-v{position:relative;border-radius:6px;overflow:hidden;background:#2a1d14;aspect-ratio:16/9;box-shadow:0 14px 32px rgba(120,60,20,.18)}
 .fx-v video{width:100%;height:100%;object-fit:cover;display:block}
 .fx-snd{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700;text-decoration:none;padding:6px 12px;border-radius:999px}
 .fx-vcap{font-size:12px;color:#5b5650;margin:8px 0 0;line-height:1.6}
 @media(min-width:960px){
   .fx{padding:64px 0 44px}
-  .fx .wrap{max-width:1240px;grid-template-columns:1.08fr 1fr;column-gap:48px;row-gap:24px;align-items:center;grid-template-areas:"l r" "c r" "s s"}
+  .fx .wrap{max-width:1240px;grid-template-columns:1fr 1fr;column-gap:72px;row-gap:24px;align-items:center;grid-template-areas:"l r" "c r" "s s"}
   .fx-hd{align-self:end}.fx-cta{align-self:start}
-  .fx h1{font-size:min(76px,5.4vw)}
+  .fx h1{font-size:min(64px,4.5vw)}
   .fx-owl{width:min(118px,8.4vw)}
   .fx-cta{grid-template-columns:1fr 1fr}
   .fx .strip{margin-top:40px}
@@ -444,19 +444,17 @@ footer{padding:36px 16px 110px;font-size:12px;color:var(--sub);text-align:center
     <p class="lead">いちばんの山は、入居が埋まるまで。愛知のオーナーご夫妻に、入居が決まるまでの道のりと、その後の運営を聞きました。</p>
     <div class="media">
       <div>
-        <div class="vid" id="kx"><button class="yt" data-t="0" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/t9knuG9a3WM/hqdefault.jpg" alt="愛知オーナーインタビューの動画" loading="lazy"><span class="play">▶</span></button></div>
-        <p class="vcap">愛知県・S様ご夫妻（2棟運営）／お顔はアウル君で伏せています・全編約31分 <span class="tbd">要確認：公開用の動画</span></p>
+        <div class="vid"><video controls playsinline preload="none" poster="assets/aichi_summary.jpg" src="assets/aichi_summary.mp4"></video></div>
+        <p class="vcap">愛知県・S様ご夫妻（2棟運営）／入居が決まるまでの話を約1分に要約・お顔はアウル君で伏せています</p>
       </div>
       <div>
-        <p class="big-q">「やるって決めたら、もう覚悟ですよ。」</p>
-        <p style="margin:0 0 4px;font-size:14px">経営に関わる章から、再生できます。</p>
-        <div class="chap">
-          <button data-t="653"><span class="t">10:53</span><span><b>入居が決まるまでの道のり</b><small>2人目が決まらない半年の話</small></span><i>▶</i></button>
-          <button data-t="760"><span class="t">12:40</span><span><b>入居につながった営業と支援</b><small>何をして、入居が決まったか</small></span><i>▶</i></button>
-          <button data-t="881"><span class="t">14:41</span><span><b>SVの支援と信頼</b><small>担当スーパーバイザーとの関わり</small></span><i>▶</i></button>
-          <button data-t="366"><span class="t">6:06</span><span><b>2棟目で感じる大変さ</b><small>棟を増やしたあとの現場</small></span><i>▶</i></button>
-          <button data-t="1368"><span class="t">22:48</span><span><b>現場の役割分担</b><small>やること・任せること</small></span><i>▶</i></button>
-        </div>
+        <p class="big-q">入居が決まらない半年に、<br>自分たちから営業に出向いた。</p>
+        <p style="margin:0 0 10px;font-size:15px">新しく担当になったスーパーバイザーの助言で、自分たちから出向く営業を続けました。人づてに信頼が広がり、入居につながっていきました。</p>
+        <ul class="ticks">
+          <li>「売上が立たないし、職員さんの費用は発生するし」。通帳を見て不安になった</li>
+          <li>SVの助言は「自分たちの方から出向いて、一つでも多く営業する」</li>
+          <li>続けるうちに「他の方から聞いたんですけど」と、話が来るように</li>
+        </ul>
       </div>
     </div>
 
