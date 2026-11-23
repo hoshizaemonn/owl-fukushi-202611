@@ -118,6 +118,38 @@ h2,h3,.q5 b,.fv h1,.big-q,.steps b,.promise b,.card .k{text-wrap:balance;word-br
   .strip{margin-top:44px}
   .strip span{font-size:13px}
 }
+/* ---------- FV v3（日本M&Aセンター型） ---------- */
+.fx{position:relative;padding:28px 0 30px;background:linear-gradient(115deg,#ffffff 0%,#f6faf8 45%,#e7f3f1 100%);overflow:hidden}
+.fx .wrap{display:grid;gap:16px;grid-template-areas:"l" "r" "c" "s"}
+.fx-l{display:contents}.fx-hd{grid-area:l}.fx-cta{grid-area:c}.fx-r{grid-area:r}.fx .strip{grid-area:s;margin-top:8px}
+.fx-tag{font-family:"Shippori Mincho",serif;font-weight:700;color:#1f4f4a;font-size:clamp(16px,4.2vw,26px);line-height:1.6;margin:0 0 10px;letter-spacing:.03em}
+.fx-h{display:flex;align-items:center;gap:12px}
+.fx-owl{width:clamp(64px,17vw,118px);height:auto;flex:0 0 auto;filter:drop-shadow(0 4px 8px rgba(0,0,0,.12))}
+.fx h1{margin:0;font-family:"Shippori Mincho",serif;font-weight:700;line-height:1.22;letter-spacing:.02em;font-size:clamp(34px,9.6vw,76px);background:linear-gradient(100deg,#1d4f47 0%,#24766a 55%,#2f9a8f 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fx h1 span{display:block;white-space:nowrap}
+.fx-note{font-family:"Shippori Mincho",serif;font-size:12px;color:#5b5650;margin:12px 0 0;line-height:1.8}
+.fx-cta{display:grid;gap:12px;margin-top:2px}
+.fx-c{position:relative;display:flex;align-items:center;gap:14px;min-height:84px;padding:14px 44px 14px 18px;border-radius:10px;color:#fff;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.12);transition:transform .15s,box-shadow .15s}
+.fx-c:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.16)}
+.fx-c.org{background:linear-gradient(135deg,#f39a4a 0%,#e6672c 60%,#d9562a 100%)}
+.fx-c.grn{background:linear-gradient(135deg,#68c39b 0%,#3e9f86 60%,#2f8f7a 100%)}
+.fx-c svg{width:46px;height:46px;flex:0 0 auto}
+.fx-c b{display:block;font-size:clamp(20px,5.4vw,26px);letter-spacing:.12em;line-height:1.3}
+.fx-c small{display:block;font-size:13px;font-weight:700;letter-spacing:.06em;opacity:.95;line-height:1.5}
+.fx-c i{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-style:normal;font-size:26px;line-height:1}
+.fx-v{position:relative;border-radius:6px;overflow:hidden;background:#182b2a;aspect-ratio:16/9;box-shadow:0 14px 32px rgba(20,60,55,.18)}
+.fx-v video{width:100%;height:100%;object-fit:cover;display:block}
+.fx-snd{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700;text-decoration:none;padding:6px 12px;border-radius:999px}
+.fx-vcap{font-size:12px;color:#5b5650;margin:8px 0 0;line-height:1.6}
+@media(min-width:960px){
+  .fx{padding:64px 0 44px}
+  .fx .wrap{max-width:1240px;grid-template-columns:1.08fr 1fr;column-gap:48px;row-gap:24px;align-items:center;grid-template-areas:"l r" "c r" "s s"}
+  .fx-hd{align-self:end}.fx-cta{align-self:start}
+  .fx h1{font-size:min(76px,5.4vw)}
+  .fx-owl{width:min(118px,8.4vw)}
+  .fx-cta{grid-template-columns:1fr 1fr}
+  .fx .strip{margin-top:40px}
+}
 /* ---------- check 5 ---------- */
 .q5{display:grid;gap:12px;counter-reset:q}
 .q5 a{counter-increment:q;display:grid;grid-template-columns:52px 1fr 22px;align-items:center;gap:12px;background:#fff;border-radius:var(--r);padding:16px 16px;text-decoration:none;box-shadow:0 2px 0 var(--line)}
@@ -277,38 +309,32 @@ footer{padding:36px 16px 110px;font-size:12px;color:var(--sub);text-align:center
   </div>
 </header>
 
-<!-- ===== FV ===== -->
-<section class="fv" id="top">
+<!-- ===== FV（v3：日本M&Aセンター型） ===== -->
+<section class="fx" id="top">
   <div class="wrap">
-    <div class="txt">
-      <div class="head"><div class="eyebrow"><i></i>法人・経営者の方へ</div>
-      <h1><span class="l1">障がい者グループホームを、</span><span class="l2"><em>事業として</em><br>始める。</span></h1></div>
-      <div class="body"><p class="sub">初期費用・融資・入居者・人材。<br>経営者が最初に確かめることに、<br>数字と実例でお答えします。</p>
-      <div class="act">
-        <a class="btn" href="#contact">資料請求（無料）</a>
-        <a class="sec" href="#contact">個別相談で、収支と融資の見込みを聞く →</a>
-      </div></div>
+    <div class="fx-l">
+      <div class="fx-hd"><p class="fx-tag">障がい者グループホームを、事業として始める方へ。</p>
+      <div class="fx-h">
+        <img class="fx-owl" src="assets/owl_openarms.webp" alt="OWLのマスコット アウル君" width="293" height="451">
+        <h1><span>経営の実際を、</span><span>オーナーの声で。</span></h1>
+      </div>
+      <p class="fx-note">※ 三重県・愛知県の加盟オーナー様へのインタビュー（2026年8月）より。初期費用・融資・入居者・人材を、数字と実例でお答えします。</p></div>
+      <div class="fx-cta">
+        <a class="fx-c org" href="#contact"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="6" width="28" height="36" rx="3" fill="#fff" opacity=".95"/><path d="M16 16h16M16 23h16M16 30h10" stroke="#e66a2c" stroke-width="3" stroke-linecap="round"/></svg><span><b>資料請求</b><small>収支と開業の流れを受け取る</small></span><i>›</i></a>
+        <a class="fx-c grn" href="#contact"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H22l-8 7v-7h-2a4 4 0 0 1-4-4z" fill="#fff" opacity=".95"/><circle cx="17" cy="20" r="2.4" fill="#2f8f7a"/><circle cx="24" cy="20" r="2.4" fill="#2f8f7a"/><circle cx="31" cy="20" r="2.4" fill="#2f8f7a"/></svg><span><b>個別相談</b><small>地域の状況と融資の見込みを聞く</small></span><i>›</i></a>
+      </div>
     </div>
-    <div class="visual" id="fvs">
-      <div class="ring">
-        <img class="sl on" src="https://owl-fukushi.net/wp-content/uploads/2026/09/real_yokkaichi_exterior.webp" alt="運営中の障がい者グループホームの外観（三重県四日市市）">
-        <img class="sl" src="assets/fv_mie.webp" alt="三重県のオーナー Y様（インタビューより）" loading="lazy">
-        <img class="sl" src="assets/fv_aichi.webp" alt="愛知県のオーナー S様ご夫妻（お顔はアウル君で伏せています）" loading="lazy">
-        <img class="sl" src="https://owl-fukushi.net/wp-content/uploads/2026/09/real_yokkaichi_living.webp" alt="共用リビング" loading="lazy">
+    <div class="fx-r">
+      <div class="fx-v">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/fv_reel.jpg" src="assets/fv_reel.mp4"></video>
+        <a class="fx-snd" href="#loan">▶ 音声つきで見る</a>
       </div>
-      <img class="owl" src="assets/owl_openarms.webp" alt="OWLのマスコット アウル君" width="293" height="451">
-      <div class="badge"><b data-b>運営中</b><span data-s>三重県四日市市の<br>グループホーム</span></div>
-      <div class="dots" role="tablist" aria-label="写真の切り替え">
-        <button class="on" aria-label="ホームの外観"><img src="https://owl-fukushi.net/wp-content/uploads/2026/09/real_yokkaichi_exterior.webp" alt=""></button>
-        <button aria-label="三重のY様"><img src="assets/fv_mie.webp" alt=""></button>
-        <button aria-label="愛知のS様ご夫妻"><img src="assets/fv_aichi.webp" alt=""></button>
-        <button aria-label="共用リビング"><img src="https://owl-fukushi.net/wp-content/uploads/2026/09/real_yokkaichi_living.webp" alt=""></button>
-      </div>
+      <p class="fx-vcap">三重県・Y様（左の場面）／愛知県・S様ご夫妻（お顔はアウル君で伏せています）</p>
     </div>
     <div class="strip">
       <div><b>1,200<small>万円</small></b><span>三重のY様の融資<br>（4行・2棟）</span></div>
+      <div><b>約4<small>ヶ月</small></b><span>三重のY様<br>1棟目が満室まで</span></div>
       <div><b>4〜6<small>ヶ月</small></b><span>ご契約から<br>開業の目安</span></div>
-      <div><b>2棟<small>目から</small></b><span>管理者・サビ管を<br>共有して利益が出る</span></div>
     </div>
   </div>
 </section>
@@ -569,12 +595,13 @@ footer{padding:36px 16px 110px;font-size:12px;color:var(--sub);text-align:center
 
 <script>
 (function(){
-  var stk=document.querySelector('.stk'),fv=document.getElementById('top');
-  var fb=document.querySelector('.fv .btn');
+  var stk=document.querySelector('.stk');
+  var fb=document.querySelector('.fx-c.org');
   function chk(){if(!stk)return;var r=fb.getBoundingClientRect();stk.classList.toggle('on',r.bottom>innerHeight||r.bottom<0)}
   addEventListener('resize',chk);
   addEventListener('scroll',chk,{passive:true});chk();
   // FV slider
+  if(document.getElementById('fvs')){
   var slides=[].slice.call(document.querySelectorAll('#fvs .sl')),dots=[].slice.call(document.querySelectorAll('#fvs .dots button')),bb=document.querySelector('#fvs [data-b]'),bs=document.querySelector('#fvs [data-s]');
   var cap=[['運営中','三重県四日市市の<br>グループホーム'],['約4ヶ月','三重のY様<br>1棟目が満室まで'],['2棟運営','愛知のS様ご夫妻<br>（お顔はアウル君）'],['ふつうの家','共用リビング<br>（四日市）']];
   var cur=0,tm;
@@ -582,6 +609,7 @@ footer{padding:36px 16px 110px;font-size:12px;color:var(--sub);text-align:center
   function auto(){clearInterval(tm);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)tm=setInterval(function(){go((cur+1)%slides.length)},5000);}
   dots.forEach(function(d,i){d.addEventListener('click',function(){go(i);auto();});});
   auto();
+  }
   var box=document.getElementById('kx');
   document.querySelectorAll('.chap button, .yt').forEach(function(b){
     b.addEventListener('click',function(){
