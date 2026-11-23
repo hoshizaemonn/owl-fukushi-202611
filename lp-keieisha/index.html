@@ -81,7 +81,7 @@ h2,h3,.q5 b,.fv h1,.big-q,.steps b,.promise b,.card .k{text-wrap:balance;word-br
 .fv h1 .l2{display:block;font-size:clamp(36px,10.4vw,68px);line-height:1.25}
 .fv h1 .l2 em{font-style:normal;color:var(--org)}
 .fv .sub{font-size:15px;line-height:1.9;margin:12px 0 0;color:#3a3632}
-.fv .visual{position:relative;width:min(60vw,290px);aspect-ratio:1;justify-self:end;margin:8px 8px 0 0}
+.fv .visual{position:relative;width:min(52vw,270px);aspect-ratio:1;justify-self:end;margin:6px 14px 0 0}
 .fv .visual .ring{position:absolute;inset:0;border-radius:50%;padding:0;border:4px solid var(--org);background:#fff}
 .fv .visual .ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:6px solid #fff;filter:brightness(1.08) saturate(1.08)}
 .fv .visual .owl{position:absolute;left:-20%;bottom:0;width:24%;height:auto;filter:drop-shadow(0 6px 10px rgba(0,0,0,.16))}
@@ -91,6 +91,15 @@ h2,h3,.q5 b,.fv h1,.big-q,.steps b,.promise b,.card .k{text-wrap:balance;word-br
 .fv .act{display:flex;flex-direction:column;gap:8px;margin-top:16px}
 .fv .act .btn{max-width:440px}
 .fv .act .sec{font-size:14px;font-weight:700;color:var(--ink);text-decoration:underline;text-underline-offset:4px;align-self:flex-start;padding:4px 2px;white-space:nowrap}
+.fv .visual .ring{overflow:hidden}
+.fv .visual .ring .sl{position:absolute;inset:0;opacity:0;transition:opacity .9s ease}
+.fv .visual .ring .sl.on{opacity:1}
+.fv .dots{position:absolute;left:50%;bottom:-50px;transform:translateX(-50%);display:flex;gap:10px}
+.fv .dots button{all:unset;cursor:pointer;width:34px;height:34px;border-radius:50%;overflow:hidden;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.15);opacity:.75;transition:.2s}
+.fv .dots button.on{border-color:var(--org);opacity:1;transform:scale(1.08)}
+.fv .dots img{width:100%;height:100%;object-fit:cover}
+.fv .visual{margin-bottom:56px!important}
+@media(min-width:700px){.fv .dots button{width:52px;height:52px}.fv .dots{bottom:-72px}.fv .visual{margin-bottom:80px!important}}
 .strip{position:relative;margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .strip div{padding:18px 6px 16px;text-align:center}
 .strip div+div{border-left:1px solid var(--line)}
@@ -280,10 +289,21 @@ footer{padding:36px 16px 110px;font-size:12px;color:var(--sub);text-align:center
         <a class="sec" href="#contact">個別相談で、収支と融資の見込みを聞く →</a>
       </div></div>
     </div>
-    <div class="visual">
-      <div class="ring"><img src="https://owl-fukushi.net/wp-content/uploads/2026/09/real_yokkaichi_exterior.webp" alt="運営中の障がい者グループホームの外観（三重県四日市市）"></div>
+    <div class="visual" id="fvs">
+      <div class="ring">
+        <img class="sl on" src="https://owl-fukushi.net/wp-content/uploads/2026/09/real_yokkaichi_exterior.webp" alt="運営中の障がい者グループホームの外観（三重県四日市市）">
+        <img class="sl" src="assets/fv_mie.webp" alt="三重県のオーナー Y様（インタビューより）" loading="lazy">
+        <img class="sl" src="assets/fv_aichi.webp" alt="愛知県のオーナー S様ご夫妻（お顔はアウル君で伏せています）" loading="lazy">
+        <img class="sl" src="https://owl-fukushi.net/wp-content/uploads/2026/09/real_yokkaichi_living.webp" alt="共用リビング" loading="lazy">
+      </div>
       <img class="owl" src="assets/owl_openarms.webp" alt="OWLのマスコット アウル君" width="293" height="451">
-      <div class="badge"><b>約4ヶ月</b><span>三重のY様<br>1棟目が満室まで</span></div>
+      <div class="badge"><b data-b>運営中</b><span data-s>三重県四日市市の<br>グループホーム</span></div>
+      <div class="dots" role="tablist" aria-label="写真の切り替え">
+        <button class="on" aria-label="ホームの外観"><img src="https://owl-fukushi.net/wp-content/uploads/2026/09/real_yokkaichi_exterior.webp" alt=""></button>
+        <button aria-label="三重のY様"><img src="assets/fv_mie.webp" alt=""></button>
+        <button aria-label="愛知のS様ご夫妻"><img src="assets/fv_aichi.webp" alt=""></button>
+        <button aria-label="共用リビング"><img src="https://owl-fukushi.net/wp-content/uploads/2026/09/real_yokkaichi_living.webp" alt=""></button>
+      </div>
     </div>
     <div class="strip">
       <div><b>1,200<small>万円</small></b><span>三重のY様の融資<br>（4行・2棟）</span></div>
@@ -550,8 +570,18 @@ footer{padding:36px 16px 110px;font-size:12px;color:var(--sub);text-align:center
 <script>
 (function(){
   var stk=document.querySelector('.stk'),fv=document.getElementById('top');
-  function chk(){if(stk)stk.classList.toggle('on',fv.getBoundingClientRect().bottom<0)}
+  var fb=document.querySelector('.fv .btn');
+  function chk(){if(!stk)return;var r=fb.getBoundingClientRect();stk.classList.toggle('on',r.bottom>innerHeight||r.bottom<0)}
+  addEventListener('resize',chk);
   addEventListener('scroll',chk,{passive:true});chk();
+  // FV slider
+  var slides=[].slice.call(document.querySelectorAll('#fvs .sl')),dots=[].slice.call(document.querySelectorAll('#fvs .dots button')),bb=document.querySelector('#fvs [data-b]'),bs=document.querySelector('#fvs [data-s]');
+  var cap=[['運営中','三重県四日市市の<br>グループホーム'],['約4ヶ月','三重のY様<br>1棟目が満室まで'],['2棟運営','愛知のS様ご夫妻<br>（お顔はアウル君）'],['ふつうの家','共用リビング<br>（四日市）']];
+  var cur=0,tm;
+  function go(i){slides[cur].classList.remove('on');dots[cur].classList.remove('on');cur=i;slides[cur].classList.add('on');dots[cur].classList.add('on');bb.innerHTML=cap[cur][0];bs.innerHTML=cap[cur][1];}
+  function auto(){clearInterval(tm);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)tm=setInterval(function(){go((cur+1)%slides.length)},5000);}
+  dots.forEach(function(d,i){d.addEventListener('click',function(){go(i);auto();});});
+  auto();
   var box=document.getElementById('kx');
   document.querySelectorAll('.chap button, .yt').forEach(function(b){
     b.addEventListener('click',function(){
